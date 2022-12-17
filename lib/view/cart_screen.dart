@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poutry_baba_screen/const/constant.dart';
 
+import '../components/button.dart';
 import '../generated/assets.dart';
 
 class CartScreen extends StatefulWidget {
@@ -79,7 +80,88 @@ class _CartScreenState extends State<CartScreen> {
               }, separatorBuilder: (context,index){
                 return SizedBox(height: width * 0.02,);
 
-              }, itemCount: 10)
+              }, itemCount: 2),
+              InkWell(
+                onTap: (){
+                  setState(() {
+
+                  });
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color:appMainColor1),
+                      borderRadius: BorderRadius.circular(7)
+                  ),
+                  margin: EdgeInsets.symmetric(vertical: width * 0.04),
+                  padding: EdgeInsets.symmetric(vertical: width * 0.04,horizontal: width * 0.04),
+                  child:Row(
+                    children: [
+                      Icon(Icons.check_circle,color:appMainColor1),
+                      SizedBox(width: width * 0.02,),
+                      Text("Apply Promo Code",style: TextStyle(fontSize: width * 0.04,color:appMainColor1),),
+                      const Spacer(),
+                      Icon(Icons.arrow_forward_ios_outlined,color:appMainColor1),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: width * 0.04),
+                child: Text("Bill Details:",textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.bold,fontSize: width * 0.05),),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: width * 0.04,horizontal: width * 0.04),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: titleBackgroundColor,
+                ),
+                child:Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: width * 0.01),
+                      child: Row(
+                        children: [
+                          Text("SubTotal:"),
+                          Spacer(),
+                          Text("Rs 400",style: TextStyle(fontWeight: FontWeight.bold),)
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: width * 0.01),
+                      child: Row(
+                        children: [
+                          Text("Discount:"),
+                          Spacer(),
+                          Text("Rs 400",style: TextStyle(fontWeight: FontWeight.bold),)
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: width * 0.01),
+                      child: Row(
+                        children: [
+                          Text("Delivery Charges:"),
+                          Spacer(),
+                          Text("Free",style: TextStyle(fontWeight: FontWeight.bold),)
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: width * 0.01),
+                      child: Row(
+                        children: [
+                          Text("Total Amount:",style: TextStyle(fontWeight: FontWeight.bold,fontSize: width * 0.05,color: appMainColor3),),
+                          Spacer(),
+                          Text("Rs 400",style: TextStyle(fontWeight: FontWeight.bold,fontSize: width * 0.05,color: appMainColor3),)
+                        ],
+                      ),
+                    ),
+                  ],
+                ) ,
+              ),
+              Button(onTap: (){}, width: width, label: "Place Order"),
             ],
           ),
         ),
