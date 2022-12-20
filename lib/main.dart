@@ -18,6 +18,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        sliderTheme: SliderThemeData(
+          thumbShape:const RoundSliderThumbShape(elevation: 0),
+          //overlayShape: SliderComponentShape.noThumb
+          trackShape: CustomTrackShape(),
+          overlayColor: Colors.transparent,
+            ),
         textTheme: GoogleFonts.latoTextTheme(Theme.of(context).textTheme),
         primaryTextTheme:
         GoogleFonts.latoTextTheme(Theme.of(context).textTheme),
@@ -28,7 +34,22 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
+class CustomTrackShape extends RoundedRectSliderTrackShape {
+  @override
+  Rect getPreferredRect({
+    required RenderBox parentBox,
+    Offset offset = Offset.zero,
+    required SliderThemeData sliderTheme,
+    bool isEnabled = false,
+    bool isDiscrete = false,
+  }) {
+    final trackHeight = sliderTheme.trackHeight;
+    final trackLeft = offset.dx;
+    final trackTop = offset.dy + (parentBox.size.height - trackHeight!) / 2;
+    final trackWidth = parentBox.size.width;
+    return Rect.fromLTWH(trackLeft, trackTop, trackWidth, trackHeight);
+  }
+}
 
 
 

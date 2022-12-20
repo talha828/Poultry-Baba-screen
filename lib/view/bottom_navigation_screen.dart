@@ -6,6 +6,7 @@ import 'package:poutry_baba_screen/generated/assets.dart';
 import 'package:poutry_baba_screen/main.dart';
 import 'package:poutry_baba_screen/view/my_order_screen.dart';
 import 'package:poutry_baba_screen/view/payment_method_screen.dart';
+import 'package:poutry_baba_screen/view/product_details.dart';
 
 import 'cart_screen.dart';
 
@@ -22,7 +23,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     PaymentScreen(),
     MyOrderScreen(),
     CartScreen(),
-    Text('Profile Page', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    ProductDetails(),
     Text('Profile Page', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
   ];
 

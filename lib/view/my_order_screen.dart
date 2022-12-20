@@ -56,7 +56,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
             ],
           ),
         ),
-        body: TabBarView(
+        body:const TabBarView(
           children: [
             ActiveOrderScreen(),
             ActiveOrderScreen(),

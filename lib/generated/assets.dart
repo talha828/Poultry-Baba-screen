@@ -6,6 +6,7 @@ class Assets {
   static const String iconCreditcard = 'assets/icon/creditcard.png';
   static const String iconDots = 'assets/icon/dots.png';
   static const String iconEasypisa = 'assets/icon/easypisa.png';
+  static const String iconExpressDelivery = 'assets/icon/express-delivery.png';
   static const String iconHouse = 'assets/icon/house.png';
   static const String iconJazzcash = 'assets/icon/jazzcash.png';
   static const String iconPaymentMethod = 'assets/icon/payment_method.jpeg';
