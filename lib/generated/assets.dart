@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String assetsImgSuccess = 'assets/img/success.svg';
   static const String iconAccount = 'assets/icon/account.png';
   static const String iconCreditcard = 'assets/icon/creditcard.png';
   static const String iconDots = 'assets/icon/dots.png';
@@ -15,5 +16,8 @@ class Assets {
   static const String iconTemp = 'assets/icon/temp.jpg';
   static const String iconTrophy = 'assets/icon/trophy.png';
   static const String iconUnionpay = 'assets/icon/unionpay.png';
+  static const String imgGoo = 'assets/img/goodbye.png';
+  static const String imgSuccess = 'assets/img/success.png';
+  static const String imgWelcome = 'assets/img/welcome.png';
 
 }

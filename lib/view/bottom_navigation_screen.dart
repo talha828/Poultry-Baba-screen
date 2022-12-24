@@ -4,9 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:poutry_baba_screen/const/constant.dart';
 import 'package:poutry_baba_screen/generated/assets.dart';
 import 'package:poutry_baba_screen/main.dart';
+import 'package:poutry_baba_screen/view/goodbye_screen.dart';
 import 'package:poutry_baba_screen/view/my_order_screen.dart';
 import 'package:poutry_baba_screen/view/payment_method_screen.dart';
 import 'package:poutry_baba_screen/view/product_details.dart';
+import 'package:poutry_baba_screen/view/WelcomeScreen.dart';
 
 import 'cart_screen.dart';
 
@@ -23,8 +25,8 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     PaymentScreen(),
     MyOrderScreen(),
     CartScreen(),
-    ProductDetails(),
-    Text('Profile Page', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    GoodByeScreen(),
+    WelcomeScreen()
   ];
 
   void _onItemTapped(int index) {
